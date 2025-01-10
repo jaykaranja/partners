@@ -3,6 +3,8 @@ import { JSDOM } from "jsdom";
 
 const scrape = async (SAMPLE_URL: string) => {
   try {
+
+    console.log(`Scraping URL: ${SAMPLE_URL}`);
     const { data: html } = await axios.get(SAMPLE_URL);
 
     const dom = new JSDOM(html);
